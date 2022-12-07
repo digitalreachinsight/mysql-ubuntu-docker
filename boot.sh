@@ -26,4 +26,12 @@ if [ $status -ne 0 ]; then
   echo "Failed to start mysql: $status"
   exit $status
 fi
+
+service proxysql start &
+status=$?
+if [ $status -ne 0 ]; then
+  echo "Failed to start mysql: $status"
+  exit $status
+fi
+
 bash
