@@ -13,7 +13,7 @@ mv /etc/mysql/mysql.conf.d/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.example
 
 cat /etc/mysql/mysql.conf.d/mysqld.example | grep -v 'bind-address' > /etc/mysql/mysql.conf.d/mysqld.cnf
 echo "bind-address            = 0.0.0.0" >> /etc/mysql/mysql.conf.d/mysqld.cnf
-echo "port                    = 3336" >>   /etc/mysql/mysql.conf.d/mysqld.cnf
+#echo "port                    = 3336" >>   /etc/mysql/mysql.conf.d/mysqld.cnf
 
 mv /var/lib/mysql /var/lib/mysql-container
 mv /var/lib/mysql-files /var/lib/mysql-files-container
