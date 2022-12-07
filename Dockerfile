@@ -18,6 +18,8 @@ COPY boot.sh /
 COPY mysqlbackup.sh /app/
 COPY create-new-mysql.sh /app/ 
 COPY cron /etc/cron.d/dockercron
+COPY proxysql_2.4.4-ubuntu20_amd64.deb /tmp/
+RUN dpkg -i /tmp/proxysql_2.4.4-ubuntu20_amd64.deb
 RUN chmod 755 /app/mysqlbackup.sh
 RUN chmod 755 /boot.sh
 RUN chmod 755 /app/create-new-mysql.sh
